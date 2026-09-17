@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>研医志 · 我的</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body data-stage="zuoti">
+<div class="stage-wrap">
+<div class="stage-cap">研医志 · 我的 — 390 × 844</div>
+<div class="phone"><div class="screen">
+
+<div class="statusbar"><span>9:41</span><div class="sb-icons">
+<svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg>
+<svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M1.5 4.5a10 10 0 0 1 13 0"/><path d="M4 7.4a6.4 6.4 0 0 1 8 0"/><circle cx="8" cy="10" r="1.1" fill="currentColor" stroke="none"/></svg>
+<svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="currentColor" opacity=".5"/><rect x="2.5" y="2.5" width="15" height="7" rx="1.8" fill="currentColor"/><path d="M23.5 4v4a2 2 0 0 0 0-4z" fill="currentColor" opacity=".5"/></svg>
+</div></div>
+
+<!-- ========== 屏 1：个人中心 ========== -->
+<div class="scr on" id="scr-home">
+<header class="stage-head">
+<div class="appbar">
+<div class="appbar-back" onclick="location.href='yuxi.html'"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div>
+<div class="appbar-title">我的</div>
+<div class="appbar-right"></div>
+</div>
+</header>
+
+<main class="scroll">
+<!-- 用户信息 -->
+<section class="card" style="margin-top:14px" data-od-id="user-info">
+<div class="row" style="gap:14px">
+<div class="qavatar" style="width:54px;height:54px"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/></svg></div>
+<div style="flex:1;min-width:0">
+<div class="card-title" style="font-size:17px">陈同学</div>
+<div class="row" style="margin-top:6px;gap:6px">
+<span class="chip acc">中医综合（307）</span>
+<span class="chip t12">连续学习 <b class="num">12</b> 天</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 会员卡（示例配置，不写死商业方案） -->
+<section class="vip-card" data-od-id="vip-card">
+<div class="row between">
+<div>
+<div class="card-title gold" style="font-size:15.5px">研医志会员 · <span id="vip-state">未开通</span></div>
+<div class="card-sub" id="vip-desc">当前免费额度：每日 10 题 AI 解析 · 3 次同类题验证</div>
+</div>
+<button class="btn btn-sm" style="background:var(--gold);color:#0A0F16;width:auto;padding:0 16px;flex:none" onclick="go('scr-vip')" data-od-id="btn-vip">了解权益</button>
+</div>
+<div class="t12 faint" style="margin-top:10px">价格与权益为示例配置项，以正式商业方案为准</div>
+</section>
+
+<!-- 学习资产 -->
+<div class="t12 faint" style="margin:18px 4px 0;font-weight:600;letter-spacing:.06em">学习资产</div>
+<div class="menu" style="margin-top:8px">
+<a class="menu-item" onclick="go('scr-archive')"><svg class="ic" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5V5.5"/></svg>学习档案<span class="arr">已学知识点 86 ›</span></a>
+<a class="menu-item" onclick="go('scr-report')"><svg class="ic" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>学习报告<span class="arr">周报已生成 ›</span></a>
+<a class="menu-item" onclick="go('scr-fav')"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4l2.3 4.9 5.2.6-3.9 3.6 1 5.2L12 15.6 7.4 18.3l1-5.2-3.9-3.6 5.2-.6z"/></svg>我的收藏<span class="arr num">23 ›</span></a>
+<a class="menu-item" href="notes.html"><svg class="ic" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>我的笔记<span class="arr num">12 ›</span></a>
+</div>
+
+<!-- 计划与提醒 -->
+<div class="t12 faint" style="margin:18px 4px 0;font-weight:600;letter-spacing:.06em">计划与提醒</div>
+<div class="menu" style="margin-top:8px">
+<a class="menu-item" onclick="go('scr-plan')"><svg class="ic" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>学习计划设置<span class="arr">每日 2 小时 ›</span></a>
+<a class="menu-item" onclick="go('scr-notify')"><svg class="ic" viewBox="0 0 24 24"><path d="M18 9a6 6 0 1 0-12 0c0 5-2 6-2 6h16s-2-1-2-6"/><path d="M10 20a2.2 2.2 0 0 0 4 0"/></svg>消息提醒<span class="arr">应用内 · 未订阅微信通知 ›</span></a>
+</div>
+
+<!-- 账号与服务 -->
+<div class="t12 faint" style="margin:18px 4px 0;font-weight:600;letter-spacing:.06em">账号与服务</div>
+<div class="menu" style="margin-top:8px">
+<a class="menu-item" onclick="go('scr-privacy')"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"/></svg>隐私与账号<span class="arr">权限 · 数据导出 · 注销 ›</span></a>
+<a class="menu-item" onclick="go('scr-help')"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9.5 9.2a2.6 2.6 0 0 1 5 .8c0 1.7-2.5 2.2-2.5 3.8M12 17h.01"/></svg>帮助与反馈<span class="arr">›</span></a>
+</div>
+
+<div class="t12 faint" style="text-align:center;margin-top:22px">研医志 · 版本 0.9.2（原型）</div>
+</main>
+</div>
+
+<!-- ========== 屏 2：会员权益与支付 ========== -->
+<div class="scr immersive" id="scr-vip">
+<header class="stage-head">
+<div class="appbar">
+<div class="appbar-back" onclick="go('scr-home')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div>
+<div class="appbar-title">会员权益</div>
+<div class="appbar-right"><span class="chip t12" id="vip-chip">未开通</span></div>
+</div>
+</header>
+<main class="scroll">
+<!-- 状态切换（演示会员多状态） -->
+<div class="filter-row" style="margin-top:12px">
+<span class="fchip on" onclick="vipState(this,'未开通')">未开通</span>
+<span class="fchip" onclick="vipState(this,'试用中')">试用中</span>
+<span class="fchip" onclick="vipState(this,'已开通')">已开通</span>
+<span class="fchip" onclick="vipState(this,'即将到期')">即将到期</span>
+<span class="fchip" onclick="vipState(this,'已过期')">已过期</span>
+</div>
+
+<section class="card" style="margin-top:8px" id="vip-panel">
+<div class="card-title gold" style="font-size:15.5px" id="vip-title">研医志会员</div>
+<div class="card-sub" id="vip-sub">解锁全部 AI 解析额度与验证次数</div>
+<div class="divider"></div>
+<div class="t13" style="margin-top:12px;font-weight:600">额度对比 · 示例配置</div>
+<div class="row between" style="margin-top:10px"><span class="t13 muted">AI 题目解析</span><span class="t13"><span class="faint">免费 10 次/日</span> → <b class="gold num">200 次/日</b></span></div>
+<div class="row between" style="margin-top:8px"><span class="t13 muted">同类题验证</span><span class="t13"><span class="faint">免费 3 次/日</span> → <b class="gold num">50 次/日</b></span></div>
+<div class="row between" style="margin-top:8px"><span class="t13 muted">AI 笔记整理</span><span class="t13"><span class="faint">免费 5 次/周</span> → <b class="gold num">不限次（公平使用）</b></span></div>
+<div class="row between" style="margin-top:8px"><span class="t13 muted">学习报告</span><span class="t13"><span class="faint">周报</span> → <b class="gold">周报 + 月度深度报告</b></span></div>
+<div class="t12 faint" style="margin-top:12px">以上为示例权益配置，正式方案确认前不作为商业承诺。</div>
+</section>
+
+<section class="card" id="price-card">
+<div class="t13" style="font-weight:600">选择周期 · 示例价格</div>
+<div class="task-row" style="cursor:pointer" onclick="pickPlan(this,'连续包月 · ¥25/月（示例）')"><div style="flex:1"><div class="t13" style="font-weight:600">连续包月</div><div class="t12 faint" style="margin-top:2px">示例价格 ¥25/月 · 随时取消</div></div><span class="chip gold t12" style="color:var(--gold);border-color:color-mix(in srgb,var(--gold) 40%,transparent)">推荐</span></div>
+<div class="task-row" style="cursor:pointer" onclick="pickPlan(this,'半年卡 · ¥128（示例）')"><div style="flex:1"><div class="t13" style="font-weight:600">半年卡</div><div class="t12 faint" style="margin-top:2px">示例价格 ¥128 · 约 ¥21/月</div></div></div>
+<div class="task-row" style="cursor:pointer" onclick="pickPlan(this,'年卡 · ¥218（示例）')"><div style="flex:1"><div class="t13" style="font-weight:600">年卡</div><div class="t12 faint" style="margin-top:2px">示例价格 ¥218 · 约 ¥18/月</div></div></div>
+<button class="btn btn-primary" style="margin-top:14px;background:var(--gold);box-shadow:0 6px 20px color-mix(in srgb,var(--gold) 26%,transparent)" id="btn-pay" onclick="paySheet()" data-od-id="btn-pay">开通会员</button>
+<button class="linkbtn mut" style="width:100%;justify-content:center" onclick="toast('正在查询可恢复的购买…');setTimeout(()=>toast('没有可恢复的订单'),1200)">恢复购买</button>
+</section>
+</main>
+</div>
+
+<!-- ========== 通用子页面容器 ========== -->
+<div class="scr immersive" id="scr-archive">
+<header class="stage-head"><div class="appbar"><div class="appbar-back" onclick="go('scr-home')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div><div class="appbar-title">学习档案</div><div class="appbar-right"></div></div></header>
+<main class="scroll">
+<section class="card" style="margin-top:14px">
+<div class="eyebrow">知识点分布 · 共 142 个</div>
+<div class="row" style="margin-top:12px;gap:8px;flex-wrap:wrap">
+<span class="chip">未接触 <b class="num">34</b></span><span class="chip tag-warn">模糊 <b class="num">22</b></span><span class="chip" style="color:var(--c-shangke);border-color:color-mix(in srgb,var(--c-shangke) 40%,transparent)">待巩固 <b class="num">18</b></span><span class="chip tag-ok">已掌握 <b class="num">68</b></span>
+</div>
+<div class="divider"></div>
+<div class="row between" style="margin-top:12px"><span class="t13 muted">已学习知识点</span><span class="t13 num">108</span></div>
+<div class="row between" style="margin-top:8px"><span class="t13 muted">累计做题</span><span class="t13 num">486</span></div>
+<div class="row between" style="margin-top:8px"><span class="t13 muted">错题已消灭</span><span class="t13 num">31</span></div>
+<div class="row between" style="margin-top:8px"><span class="t13 muted">记忆卡片</span><span class="t13 num">57 · 稳定度均值 71%</span></div>
+</section>
+</main>
+</div>
+
+<div class="scr immersive" id="scr-report">
+<header class="stage-head"><div class="appbar"><div class="appbar-back" onclick="go('scr-home')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div><div class="appbar-title">学习报告</div><div class="appbar-right"><span class="chip t12">本周</span></div></div></header>
+<main class="scroll">
+<section class="card" style="margin-top:14px">
+<div class="eyebrow">7 月 28 日 – 8 月 3 日</div>
+<div class="row" style="margin-top:12px;gap:18px">
+<div><div class="num" style="font-size:24px;font-weight:600">9.5<span class="t13 faint"> 小时</span></div><div class="t12 faint" style="margin-top:3px">总时长</div></div>
+<div><div class="num" style="font-size:24px;font-weight:600">126</div><div class="t12 faint" style="margin-top:3px">做题</div></div>
+<div><div class="num" style="font-size:24px;font-weight:600;color:var(--c-fuxi)">78%</div><div class="t12 faint" style="margin-top:3px">正确率</div></div>
+</div>
+<div class="divider"></div>
+<div class="t13" style="margin-top:12px;font-weight:600">系统建议</div>
+<div class="t12 muted" style="margin-top:6px;line-height:1.7">藏象学说进度领先计划 2 天；中诊舌诊部分尚未开始，建议下周预习并安排 1 次真题小测。</div>
+</section>
+</main>
+</div>
+
+<div class="scr immersive" id="scr-fav">
+<header class="stage-head"><div class="appbar"><div class="appbar-back" onclick="go('scr-home')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div><div class="appbar-title">我的收藏</div><div class="appbar-right"></div></div></header>
+<main class="scroll">
+<div class="task-row" style="margin-top:14px" onclick="location.href='zuoti.html'"><div style="flex:1"><div class="t13" style="font-weight:600">肝藏血与脾统血的鉴别（2023 真题）</div><div class="t12 faint" style="margin-top:3px">收藏于昨日 · 题目</div></div><span class="chip">题目</span></div>
+<div class="task-row" onclick="location.href='shangke.html'"><div style="flex:1"><div class="t13" style="font-weight:600">五行乘侮判定技巧（讲义片段）</div><div class="t12 faint" style="margin-top:3px">收藏于周一 · 讲义</div></div><span class="chip">讲义</span></div>
+</main>
+</div>
+
+<div class="scr immersive" id="scr-plan">
+<header class="stage-head"><div class="appbar"><div class="appbar-back" onclick="go('scr-home')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div><div class="appbar-title">学习计划设置</div><div class="appbar-right"></div></div></header>
+<main class="scroll">
+<section class="card" style="margin-top:14px">
+<div class="field-lab" style="margin-top:0">每日目标时长</div>
+<div class="row" style="gap:8px" id="plan-hours">
+<span class="fchip" onclick="planPick(this)">1 小时</span><span class="fchip on" onclick="planPick(this)">2 小时</span><span class="fchip" onclick="planPick(this)">3 小时</span><span class="fchip" onclick="planPick(this)">4 小时</span>
+</div>
+<div class="field-lab">目标考试日期</div>
+<div class="row between"><span class="t13">2026 年 12 月 26 日</span><span class="chip num">剩 145 天</span></div>
+<div class="field-lab">五阶段分配</div>
+<div class="t12 muted" style="line-height:1.8">预习 20% · 上课 35% · 做题 30% · 复习 10% · 改错 5%</div>
+<button class="btn btn-primary" style="margin-top:16px" onclick="go('scr-home');toast('学习计划已保存')">保存计划</button>
+</section>
+</main>
+</div>
+
+<div class="scr immersive" id="scr-notify">
+<header class="stage-head"><div class="appbar"><div class="appbar-back" onclick="go('scr-home')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div><div class="appbar-title">消息提醒</div><div class="appbar-right"></div></div></header>
+<main class="scroll">
+<section class="card" style="margin-top:14px">
+<div class="row between"><div><div class="t13" style="font-weight:600">复习到期提醒</div><div class="t12 faint" style="margin-top:2px">应用内消息</div></div><span class="chip acc">已开启</span></div>
+<div class="row between" style="margin-top:14px"><div><div class="t13" style="font-weight:600">改错重做开放提醒</div><div class="t12 faint" style="margin-top:2px">应用内消息</div></div><span class="chip acc">已开启</span></div>
+<div class="row between" style="margin-top:14px"><div><div class="t13" style="font-weight:600">微信订阅通知</div><div class="t12 faint" style="margin-top:2px">未授权 · 授权后可在微信内接收</div></div><button class="btn btn-soft btn-xs" onclick="toast('请在小程序内完成订阅授权 · 未授权时不发送系统通知')">去授权</button></div>
+</section>
+</main>
+</div>
+
+<div class="scr immersive" id="scr-privacy">
+<header class="stage-head"><div class="appbar"><div class="appbar-back" onclick="go('scr-home')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div><div class="appbar-title">隐私与账号</div><div class="appbar-right"></div></div></header>
+<main class="scroll">
+<section class="card" style="margin-top:14px">
+<div class="t13" style="font-weight:600">权限管理</div>
+<div class="row between" style="margin-top:12px"><span class="t13 muted">麦克风（语音作答 / 语音笔记）</span><span class="chip acc">已授权</span></div>
+<div class="row between" style="margin-top:10px"><span class="t13 muted">相册（图片笔记 · P1）</span><span class="chip">未授权</span></div>
+<div class="row between" style="margin-top:10px"><span class="t13 muted">微信订阅通知</span><span class="chip">未授权</span></div>
+</section>
+<section class="card">
+<div class="t13" style="font-weight:600">数据管理</div>
+<div class="t12 muted" style="margin-top:6px;line-height:1.7">可导出学习记录、笔记与错题数据（JSON / CSV）。删除数据后将无法恢复，账号注销前请先导出。</div>
+<div class="btn-row" style="margin-top:12px">
+<button class="btn btn-soft btn-sm" onclick="toast('导出任务已创建 · 完成后在应用内消息中下载')">导出我的数据</button>
+<button class="btn btn-ghost btn-sm" style="color:var(--c-gaicuo)" onclick="toast('注销需验证身份并二次确认 · 数据将按隐私政策删除')">注销账号</button>
+</div>
+</section>
+</main>
+</div>
+
+<div class="scr immersive" id="scr-help">
+<header class="stage-head"><div class="appbar"><div class="appbar-back" onclick="go('scr-home')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div><div class="appbar-title">帮助与反馈</div><div class="appbar-right"></div></div></header>
+<main class="scroll">
+<section class="card" style="margin-top:14px">
+<div class="task-row" style="margin-top:0;cursor:pointer" onclick="toast('常见问题 · 如何使用五阶段闭环')"><div class="t13" style="flex:1">常见问题</div><svg class="ic ic-sm" viewBox="0 0 24 24" style="color:var(--faint)"><path d="M9 6l6 6-6 6"/></svg></div>
+<div class="task-row" style="cursor:pointer" onclick="toast('已打开反馈表单 · 提交后 1–3 个工作日回复')"><div class="t13" style="flex:1">提交反馈</div><svg class="ic ic-sm" viewBox="0 0 24 24" style="color:var(--faint)"><path d="M9 6l6 6-6 6"/></svg></div>
+<div class="task-row" style="cursor:pointer" onclick="toast('联系客服 · 工作日 9:00–18:00')"><div class="t13" style="flex:1">联系客服</div><svg class="ic ic-sm" viewBox="0 0 24 24" style="color:var(--faint)"><path d="M9 6l6 6-6 6"/></svg></div>
+</section>
+</main>
+</div>
+
+<!-- 支付弹层 -->
+<div class="scrim" id="scrim" onclick="closeSheet()"></div>
+<div class="sheet" id="sheet">
+<div class="sheet-grab"></div>
+<div class="card-title" style="font-size:17px">确认支付</div>
+<div class="t12 faint" style="margin-top:4px" id="pay-plan">连续包月 · ¥25/月（示例）</div>
+<div class="card2" style="margin-top:14px">
+<div class="row between"><span class="t13 muted">支付方式</span><span class="t13">微信支付</span></div>
+<div class="row between" style="margin-top:8px"><span class="t13 muted">应付金额</span><span class="t15 gold num" style="font-size:17px;font-weight:600">¥25.00 <span class="t12 faint">示例</span></span></div>
+</div>
+<div class="btn-row" style="margin-top:16px">
+<button class="btn btn-ghost" onclick="closeSheet();toast('支付已取消')">取消</button>
+<button class="btn btn-primary" style="background:var(--gold)" onclick="pay()">确认支付</button>
+</div>
+<button class="linkbtn mut" style="width:100%;justify-content:center" onclick="closeSheet();payFail()">模拟支付失败（演示）</button>
+</div>
+
+</div></div>
+</div>
+
+<script>
+function go(id){
+ document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));
+ document.getElementById(id).classList.add('on');
+ const sc=document.querySelector('#'+id+' .scroll');if(sc)sc.scrollTop=0;
+}
+function planPick(el){el.parentNode.querySelectorAll('.fchip').forEach(c=>c.classList.remove('on'));el.classList.add('on');}
+function pickPlan(el,name){
+ document.querySelectorAll('#price-card .task-row').forEach(r=>r.style.borderColor='');
+ el.style.borderColor='color-mix(in srgb,var(--gold) 55%,transparent)';
+ document.getElementById('pay-plan').textContent=name;
+ document.getElementById('btn-pay').textContent='开通会员 · '+name.split(' · ')[1];
+}
+function vipState(el,state){
+ document.querySelectorAll('.filter-row .fchip').forEach(c=>c.classList.remove('on'));el.classList.add('on');
+ const chip=document.getElementById('vip-chip'),btn=document.getElementById('btn-pay');
+ const sub=document.getElementById('vip-sub');
+ chip.textContent=state;
+ document.getElementById('vip-state').textContent=state;
+ const map={
+  '未开通':['解锁全部 AI 解析额度与验证次数','开通会员',''],
+  '试用中':['试用剩余 3 天 · 试用额度与会员一致','开通正式会员','tag-ok'],
+  '已开通':['有效期至 2026-09-02 · 自动续费已开启','管理订阅','tag-ok'],
+  '即将到期':['3 天后到期 · 到期后恢复免费额度','立即续费','tag-warn'],
+  '已过期':['已于 7 月 30 日到期 · 当前为免费额度','重新开通','tag-bad']
+ };
+ const m=map[state];
+ sub.textContent=m[0];btn.textContent=m[1];
+ chip.className='chip t12 '+(m[2]||'');
+ document.getElementById('vip-desc').textContent=state==='已开通'?'会员额度生效中 · 到期自动续费':'当前免费额度：每日 10 题 AI 解析 · 3 次同类题验证';
+}
+function paySheet(){document.getElementById('scrim').classList.add('on');document.getElementById('sheet').classList.add('on');}
+function closeSheet(){document.getElementById('scrim').classList.remove('on');document.getElementById('sheet').classList.remove('on');}
+function pay(){
+ closeSheet();
+ toast('订单处理中…');
+ setTimeout(()=>{
+  vipState({textContent:'已开通'},'已开通');
+  document.querySelectorAll('#scr-vip .filter-row .fchip').forEach(c=>c.classList.toggle('on',c.textContent==='已开通'));
+  toast('支付成功 · 会员已生效');
+ },1400);
+}
+function payFail(){
+ toast('支付失败 · 请重试或更换支付方式');
+ setTimeout(()=>toast('订单已关闭 · 未产生扣款'),1600);
+}
+function toast(msg){
+ const old=document.querySelector('.toast');if(old)old.remove();
+ const t=document.createElement('div');t.className='toast';t.style.bottom='40px';
+ t.innerHTML='<svg class="ic ic-sm" viewBox="0 0 24 24" style="color:var(--gold)"><path d="M20 6L9 17l-5-5"/></svg>'+msg;
+ document.querySelector('.phone').appendChild(t);
+ setTimeout(()=>{t.style.opacity='0';t.style.transition='opacity .2s';setTimeout(()=>t.remove(),220);},1800);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>研医志 · 改错</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body data-stage="gaicuo">
+<div class="stage-wrap">
+<div class="stage-cap">研医志 · 改错 — 390 × 844</div>
+<div class="phone"><div class="screen">
+
+<!-- 阶段语义纹理：修复路径 -->
+<svg class="stage-tex" viewBox="0 0 390 844" preserveAspectRatio="none"><path d="M-10 700 l60 -40 m0 40 l60 -80 m0 80 l70 -50" stroke="#F07A56" stroke-width="1.2" fill="none" opacity=".8"/></svg>
+
+<div class="statusbar"><span>9:41</span><div class="sb-icons">
+<svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg>
+<svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M1.5 4.5a10 10 0 0 1 13 0"/><path d="M4 7.4a6.4 6.4 0 0 1 8 0"/><circle cx="8" cy="10" r="1.1" fill="currentColor" stroke="none"/></svg>
+<svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="currentColor" opacity=".5"/><rect x="2.5" y="2.5" width="15" height="7" rx="1.8" fill="currentColor"/><path d="M23.5 4v4a2 2 0 0 0 0-4z" fill="currentColor" opacity=".5"/></svg>
+</div></div>
+
+<!-- ========== 屏 1：阶段首页 ========== -->
+<div class="scr on" id="scr-home">
+<header class="stage-head">
+<div class="stage-name"><span class="stage-dot"></span>改错</div>
+<div class="crumb-row">
+<div class="crumb">中医综合（307） · <b>今日待改错</b></div>
+<div class="quick-links">
+<a class="qlink" href="notes.html"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>笔记</a>
+<a class="qavatar" href="profile.html" aria-label="个人中心"><svg class="ic ic-sm" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/></svg></a>
+</div></div>
+</header>
+
+<main class="scroll">
+<!-- 主任务卡 -->
+<section class="card" data-od-id="main-task">
+<div class="eyebrow">今日待改错</div>
+<div class="card-title" style="margin-top:8px">肝藏血与脾统血的鉴别</div>
+<div class="card-sub">昨日练习答错 · 第 2 次出错 · 需完成归因后进入间隔重做</div>
+<div class="steps">
+<div class="step done"><i>1</i><span>归因</span></div>
+<div class="step now"><i>2</i><span>记录</span></div>
+<div class="step"><i>3</i><span>重做</span></div>
+<div class="step"><i>4</i><span>验证</span></div>
+<div class="step"><i>5</i><span>消灭</span></div>
+</div>
+<button class="btn btn-primary" style="margin-top:16px" onclick="go('scr-detail')" data-od-id="btn-start-fix">继续改错 · 补全改错记录</button>
+</section>
+
+<!-- 次级入口（真实筛选列表） -->
+<div class="row" style="gap:8px;margin-top:14px;flex-wrap:wrap" data-od-id="sub-entries">
+<button class="fchip" onclick="openList('反复错误','近 30 天出错 ≥ 2 次')">反复错误 · 4</button>
+<button class="fchip" onclick="openList('按知识点','藏象学说 · 3 / 气血津液 · 1')">按知识点</button>
+<button class="fchip" onclick="openList('按错误原因','概念混淆 · 3 / 审题错误 · 1')">按错误原因</button>
+<button class="fchip" onclick="openList('待验证','已完成归因，等待间隔重做')">待验证 · 2</button>
+<button class="fchip" onclick="openList('已消灭','近 30 天通过验证 · 5')">已消灭 · 5</button>
+</div>
+
+<!-- 待重做提醒 -->
+<section class="card" data-od-id="redo-queue">
+<div class="card-sub" style="margin-top:0;font-weight:600;color:var(--fg);font-size:14px">待间隔重做</div>
+<div class="task-row" style="cursor:default">
+<div style="flex:1;min-width:0"><div class="t13" style="font-weight:600">心主血脉的病理表现</div><div class="t12 faint" style="margin-top:3px">归因完成于 8 月 1 日 21:12 · 满 24 小时后开放重做</div></div>
+<span class="chip" id="redo-timer">还需 <b class="num">3</b> 小时</span>
+</div>
+<div class="task-row" onclick="go('scr-redo')">
+<div style="flex:1;min-width:0"><div class="t13" style="font-weight:600">肺主通调水道</div><div class="t12 faint" style="margin-top:3px">已满 24 小时 · 原题重做已开放</div></div>
+<span class="chip acc">可重做</span>
+</div>
+</section>
+</main>
+
+<nav class="tabbar" data-od-id="tabbar">
+<a class="tab-item" href="yuxi.html"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>预习</a>
+<a class="tab-item" href="shangke.html"><svg class="ic" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="3"/><path d="M10.5 9.7l4.2 2.3-4.2 2.3z"/></svg>上课</a>
+<a class="tab-item" href="zuoti.html"><svg class="ic" viewBox="0 0 24 24"><path d="M8 6.5h12M8 12h12M8 17.5h12"/><path d="M3.6 6.5h.01M3.6 12h.01M3.6 17.5h.01"/></svg>做题</a>
+<a class="tab-item" href="fuxi.html"><svg class="ic" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 3.5V7.5h-4"/></svg>复习</a>
+<a class="tab-item active" href="gaicuo.html"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9 12l2 2 4-4.5"/></svg>改错</a>
+</nav>
+</div>
+
+<!-- ========== 屏 2：错题详情 + 归因记录（沉浸） ========== -->
+<div class="scr immersive" id="scr-detail">
+<header class="stage-head">
+<div class="appbar">
+<div class="appbar-back" onclick="go('scr-home');toast('归因草稿已自动保存')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div>
+<div class="appbar-title">错题详情</div>
+<div class="appbar-right"><span class="chip tag-bad t12">第 2 次出错</span></div>
+</div>
+</header>
+<main class="scroll">
+<!-- 题目 -->
+<section class="card" style="margin-top:14px" data-od-id="err-question">
+<div class="t12 faint">单选 · 2023 年真题改编 · 昨日练习</div>
+<div class="card-title" style="margin-top:8px;font-size:14px;line-height:1.7;font-weight:500">肝藏血与脾统血的主要区别在于？</div>
+<div class="opt wrong" style="cursor:default"><span class="opt-key">A</span>肝藏血只与月经有关</div>
+<div class="opt right" style="cursor:default"><span class="opt-key">B</span>肝藏血主贮藏调节，脾统血主固摄运行</div>
+<div class="card2" style="margin-top:10px">
+<div class="t12" style="font-weight:600">解析</div>
+<div class="t12 muted" style="margin-top:4px;line-height:1.7">肝藏血指贮藏血液、调节血量；脾统血指脾气固摄血液行于脉中。你两次都选择了「与月经有关」，属于概念混淆。</div>
+</div>
+<div class="t12 faint" style="margin-top:10px">历史：7 月 28 日错 · 昨日错 · 已归因 1 次</div>
+</section>
+
+<!-- 错误归因 -->
+<section class="card" data-od-id="err-reason">
+<div class="card-title" style="font-size:15.5px">确认错误原因</div>
+<div class="card2" style="margin-top:10px;display:flex;align-items:center;gap:10px">
+<svg class="ic ic-sm" viewBox="0 0 24 24" style="color:var(--accent);flex:none"><path d="M12 3l1.9 4.6L18.5 9l-4.6 1.9L12 15.5l-1.9-4.6L5.5 9l4.6-1.4z"/></svg>
+<div class="t12 muted" style="flex:1">AI 建议：<b style="color:var(--fg)">概念混淆</b> · 需你确认后生效</div>
+</div>
+<div class="row" style="gap:8px;flex-wrap:wrap;margin-top:12px" id="reason-row">
+<span class="fchip" onclick="pickReason(this)">知识点不会</span>
+<span class="fchip on" onclick="pickReason(this)">概念混淆</span>
+<span class="fchip" onclick="pickReason(this)">记忆不牢</span>
+<span class="fchip" onclick="pickReason(this)">审题错误</span>
+<span class="fchip" onclick="pickReason(this)">粗心</span>
+<span class="fchip" onclick="pickReason(this)">时间不足</span>
+</div>
+</section>
+
+<!-- 改错记录：三个结构化字段 -->
+<section class="card" data-od-id="err-record">
+<div class="card-title" style="font-size:15.5px">改错记录</div>
+<div class="field-lab">我为什么错 <b>*</b></div>
+<textarea class="ta" id="f1" placeholder="例：把「藏血」理解成「只与月经有关」，没分清贮藏调节与固摄的分工">把藏血理解成只与月经有关，没分清「贮藏调节」与「固摄」的分工。</textarea>
+<div class="field-lab">正确判断思路 <b>*</b></div>
+<textarea class="ta" id="f2" placeholder="例：先定位两脏功能关键词——肝「贮藏调节」、脾「固摄」，再对照选项">先定位关键词：肝=贮藏调节（仓库），脾=固摄（闸门），再对照选项排除绝对化表述。</textarea>
+<div class="field-lab">下次看到什么信息需要警惕 <b>*</b></div>
+<textarea class="ta" id="f3" placeholder="例：题干出现「藏血 vs 统血」时，警惕只与单一生理现象绑定的选项">题干出现「藏血 vs 统血」时，警惕把功能绑定到单一生理现象（如月经）的选项。</textarea>
+</section>
+
+<button class="btn btn-primary" onclick="saveRecord()" data-od-id="btn-save-record">确认原因并保存记录</button>
+<div class="t12 faint" style="text-align:center;margin-top:10px">保存后进入「待间隔重做」· 满 24 小时开放原题重做</div>
+</main>
+</div>
+
+<!-- ========== 屏 3：待间隔重做（状态页） ========== -->
+<div class="scr" id="scr-waiting">
+<header class="stage-head">
+<div class="appbar">
+<div class="appbar-back" onclick="go('scr-home')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div>
+<div class="appbar-title">待间隔重做</div>
+<div class="appbar-right"></div>
+</div>
+</header>
+<main class="scroll">
+<section class="card" style="margin-top:14px" data-od-id="waiting-card">
+<div class="empty" style="padding:20px 16px 10px">
+<svg class="ic" viewBox="0 0 24 24" style="color:var(--accent)"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+<h4>归因与记录已保存</h4>
+<p>按记忆规律，原题将在 <b>24 小时后</b>重新出现。<br>重做正确后，还需通过 2 道同类题验证。</p>
+</div>
+<div class="steps" style="margin-top:6px">
+<div class="step done"><i>1</i><span>归因</span></div>
+<div class="step done"><i>2</i><span>记录</span></div>
+<div class="step now"><i>3</i><span>重做</span></div>
+<div class="step"><i>4</i><span>验证</span></div>
+<div class="step"><i>5</i><span>消灭</span></div>
+</div>
+<div class="card2" style="margin-top:14px">
+<div class="row between"><span class="t13">原题重做开放</span><span class="t13 num" style="color:var(--accent)">明天 09:41</span></div>
+<div class="row between" style="margin-top:8px"><span class="t12 muted">提醒方式</span><span class="t12 muted">应用内消息 · 未授权订阅通知</span></div>
+</div>
+<button class="btn btn-primary" style="margin-top:14px" onclick="toast('演示模式：直接模拟 24 小时后');go('scr-redo')" data-od-id="btn-sim-redo">模拟时间到达 · 立即重做（演示）</button>
+<button class="linkbtn mut" style="width:100%;justify-content:center" onclick="go('scr-home')">返回改错首页</button>
+</section>
+</main>
+</div>
+
+<!-- ========== 屏 4：原题重做（沉浸） ========== -->
+<div class="scr immersive" id="scr-redo">
+<header class="stage-head">
+<div class="appbar">
+<div class="appbar-back" onclick="go('scr-home')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>退出</div>
+<div class="appbar-title">间隔重做 · 原题</div>
+<div class="appbar-right"><span class="chip acc t12">24h 后</span></div>
+</div>
+</header>
+<main class="scroll">
+<section class="card" style="margin-top:14px" data-od-id="redo-quiz">
+<div class="t12 faint">原题重做 · 选项已乱序</div>
+<div class="card-title" style="margin-top:8px;font-size:14px;line-height:1.7;font-weight:500">肝藏血与脾统血的主要区别在于？</div>
+<div id="redo-opts">
+<div class="opt" onclick="redoPick(this,false)"><span class="opt-key">A</span>二者功能完全相同，仅表述不同</div>
+<div class="opt" onclick="redoPick(this,true)"><span class="opt-key">B</span>肝藏血主贮藏调节，脾统血主固摄运行</div>
+<div class="opt" onclick="redoPick(this,false)"><span class="opt-key">C</span>肝藏血只与月经有关</div>
+<div class="opt" onclick="redoPick(this,false)"><span class="opt-key">D</span>脾统血负责生成血液</div>
+</div>
+<button class="btn btn-primary off" style="margin-top:14px" id="btn-redo-submit" onclick="redoSubmit()">提交</button>
+</section>
+</main>
+</div>
+
+<!-- ========== 屏 5：同类题验证（沉浸） ========== -->
+<div class="scr immersive" id="scr-verify">
+<header class="stage-head">
+<div class="appbar">
+<div class="appbar-back" onclick="go('scr-home')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>退出</div>
+<div class="appbar-title">同类题验证</div>
+<div class="appbar-right"><span class="chip t12 num" id="vf-pos">1 / 2</span></div>
+</div>
+</header>
+<main class="scroll">
+<div class="card2" style="margin-top:14px;display:flex;align-items:center;gap:10px">
+<svg class="ic ic-sm" viewBox="0 0 24 24" style="color:var(--c-fuxi);flex:none"><path d="M20 6L9 17l-5-5"/></svg>
+<div class="t12 muted">原题重做正确 · 再答对 <b style="color:var(--fg)">2 道同类题</b>即可消灭此错</div>
+</div>
+<section class="card" data-od-id="verify-quiz">
+<div class="t12 faint" id="vf-src">同类题 · 藏血与统血 · 2022 真题改编</div>
+<div class="card-title" style="margin-top:8px;font-size:14px;line-height:1.7;font-weight:500" id="vf-q">脾不统血最常见的临床表现是？</div>
+<div id="vf-opts"></div>
+<button class="btn btn-primary off" style="margin-top:14px" id="btn-vf" onclick="vfSubmit()">提交</button>
+</section>
+</main>
+</div>
+
+<!-- ========== 屏 6：已消灭结果 ========== -->
+<div class="scr" id="scr-cleared">
+<header class="stage-head">
+<div class="appbar">
+<div class="appbar-back" onclick="go('scr-home')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div>
+<div class="appbar-title">改错结果</div>
+<div class="appbar-right"></div>
+</div>
+</header>
+<main class="scroll">
+<section class="card" style="margin-top:14px" data-od-id="cleared-card">
+<div class="empty" style="padding:20px 16px 8px">
+<svg class="ic" viewBox="0 0 24 24" style="color:var(--c-fuxi);width:38px;height:38px"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg>
+<h4 style="color:var(--c-fuxi)">已消灭 · 肝藏血与脾统血的鉴别</h4>
+<p>归因 + 记录 + 24h 重做正确 + 2 道同类题验证通过</p>
+</div>
+<div class="steps" style="margin-top:8px">
+<div class="step done"><i>1</i><span>归因</span></div>
+<div class="step done"><i>2</i><span>记录</span></div>
+<div class="step done"><i>3</i><span>重做</span></div>
+<div class="step done"><i>4</i><span>验证</span></div>
+<div class="step done"><i>5</i><span>消灭</span></div>
+</div>
+<div class="card2" style="margin-top:14px">
+<div class="t12 muted" style="line-height:1.7">已生成「错题启示」笔记并关联原题与验证记录。若今后同知识点再次答错，将自动恢复为「待改错」并保留历史状态变化。</div>
+</div>
+<a class="btn btn-primary" style="margin-top:14px" href="notes.html" data-od-id="btn-view-note">查看错题启示笔记</a>
+<button class="linkbtn mut" style="width:100%;justify-content:center" onclick="go('scr-home')">返回改错首页</button>
+</section>
+</main>
+</div>
+
+<!-- ========== 屏 7：筛选列表 ========== -->
+<div class="scr" id="scr-list">
+<header class="stage-head">
+<div class="appbar">
+<div class="appbar-back" onclick="go('scr-home')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div>
+<div class="appbar-title" id="list-title">反复错误</div>
+<div class="appbar-right"></div>
+</div>
+</header>
+<main class="scroll">
+<div class="card-sub" style="margin-top:14px" id="list-desc">近 30 天出错 ≥ 2 次</div>
+<div class="task-row" onclick="go('scr-detail')">
+<div style="flex:1;min-width:0"><div class="t13" style="font-weight:600">肝藏血与脾统血的鉴别</div><div class="t12 faint" style="margin-top:3px">错 2 次 · 概念混淆 · 归因完成</div></div>
+<span class="chip tag-warn">记录中</span>
+</div>
+<div class="task-row" onclick="go('scr-detail')">
+<div style="flex:1;min-width:0"><div class="t13" style="font-weight:600">心主血脉的病理表现</div><div class="t12 faint" style="margin-top:3px">错 2 次 · 记忆不牢 · 待重做</div></div>
+<span class="chip">待重做</span>
+</div>
+<div class="task-row" onclick="go('scr-detail')">
+<div style="flex:1;min-width:0"><div class="t13" style="font-weight:600">五行乘侮的判定</div><div class="t12 faint" style="margin-top:3px">错 3 次 · 概念混淆 · 待归因</div></div>
+<span class="chip tag-bad">待归因</span>
+</div>
+<div class="task-row" onclick="go('scr-detail')">
+<div style="flex:1;min-width:0"><div class="t13" style="font-weight:600">肺主通调水道</div><div class="t12 faint" style="margin-top:3px">错 2 次 · 审题错误 · 可重做</div></div>
+<span class="chip acc">可重做</span>
+</div>
+</main>
+</div>
+
+</div></div>
+</div>
+
+<script>
+const VF=[
+ {q:'脾不统血最常见的临床表现是？',opts:[['头痛眩晕',0],['便血崩漏等慢性出血',1],['高热神昏',0],['口舌生疮',0]],ans:1},
+ {q:'肝藏血功能减退，最早多表现为？',opts:[['目涩、月经量少',1],['便血不止',0],['呼吸表浅',0],['完谷不化',0]],ans:0}
+];
+let vi=0,vpick=-1,vpass=0;
+function go(id){
+ document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));
+ document.getElementById(id).classList.add('on');
+ const sc=document.querySelector('#'+id+' .scroll');if(sc)sc.scrollTop=0;
+}
+function pickReason(el){
+ document.querySelectorAll('#reason-row .fchip').forEach(c=>c.classList.remove('on'));
+ el.classList.add('on');
+ toast('已确认为「'+el.textContent+'」');
+}
+function saveRecord(){
+ const f1=document.getElementById('f1').value.trim(),f2=document.getElementById('f2').value.trim(),f3=document.getElementById('f3').value.trim();
+ if(!f1||!f2||!f3){toast('三个字段均为必填 · 请补全后保存');return;}
+ go('scr-waiting');toast('已保存 · 进入待间隔重做');
+}
+function redoPick(el,right){
+ document.querySelectorAll('#redo-opts .opt').forEach(o=>o.classList.remove('sel'));
+ el.classList.add('sel');el.dataset.right=right?'1':'0';
+ document.getElementById('btn-redo-submit').classList.remove('off');
+}
+function redoSubmit(){
+ const sel=document.querySelector('#redo-opts .opt.sel');
+ if(!sel)return;
+ if(sel.dataset.right==='1'){vi=0;vpass=0;renderVf();go('scr-verify');toast('原题重做正确 · 进入同类题验证');}
+ else{toast('仍答错 · 已恢复为待改错并保留记录');go('scr-home');}
+}
+function renderVf(){
+ vpick=-1;
+ document.getElementById('vf-pos').textContent=(vi+1)+' / 2';
+ const Q=VF[vi];
+ document.getElementById('vf-q').textContent=Q.q;
+ const box=document.getElementById('vf-opts');box.innerHTML='';
+ Q.opts.forEach((o,i)=>{
+  const d=document.createElement('div');d.className='opt';
+  d.innerHTML='<span class="opt-key">'+String.fromCharCode(65+i)+'</span>'+o[0];
+  d.onclick=()=>{box.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));d.classList.add('sel');vpick=i;document.getElementById('btn-vf').classList.remove('off');};
+  box.appendChild(d);
+ });
+ document.getElementById('btn-vf').classList.add('off');
+}
+function vfSubmit(){
+ if(vpick===-1)return;
+ if(vpick===VF[vi].ans){vpass++;toast('回答正确 · '+vpass+' / 2');}
+ else{toast('验证未通过 · 恢复为待改错');go('scr-home');return;}
+ if(vi<1){vi++;renderVf();}
+ else go('scr-cleared');
+}
+function openList(title,desc){
+ document.getElementById('list-title').textContent=title;
+ document.getElementById('list-desc').textContent=desc;
+ go('scr-list');
+}
+function toast(msg){
+ const old=document.querySelector('.toast');if(old)old.remove();
+ const t=document.createElement('div');t.className='toast';t.style.bottom='40px';
+ t.innerHTML='<svg class="ic ic-sm" viewBox="0 0 24 24" style="color:var(--accent)"><path d="M20 6L9 17l-5-5"/></svg>'+msg;
+ document.querySelector('.phone').appendChild(t);
+ setTimeout(()=>{t.style.opacity='0';t.style.transition='opacity .2s';setTimeout(()=>t.remove(),220);},1800);
+}
+</script>
+</body>
+</html>

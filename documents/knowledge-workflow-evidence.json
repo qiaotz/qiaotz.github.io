@@ -1,0 +1,29 @@
+{
+  "description": "历史交付验收字段节选；省略内部路径及内容正文",
+  "chapterId": "306-IM-CH003",
+  "date": "2026-08-26",
+  "validationStatus": "PASS",
+  "counts": {
+    "cards": 4,
+    "moduleSlots": 36,
+    "readyModules": 36,
+    "notApplicableModules": 0,
+    "questions": 76,
+    "practiceOptionAnalysisCount": 40,
+    "duplicateStemCount": 0
+  },
+  "invariants": {
+    "knowledgeCardIdsAndOrderPreserved": true,
+    "questionIdsAndOrderPreserved": true,
+    "baselineShaMatched": true,
+    "factConflictReportBound": null
+  },
+  "acceptanceStatus": "ACCEPTED_CANDIDATE_NOT_IMPORTED",
+  "recallsReviewed": 24,
+  "imported": false,
+  "published": false,
+  "sourceFiles": [
+    "306-IM-CH003.final-validation.json",
+    "306-IM-CH003.active-recall-acceptance.json"
+  ]
+}

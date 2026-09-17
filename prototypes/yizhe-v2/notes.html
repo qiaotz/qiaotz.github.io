@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>研医志 · 笔记中心</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body data-stage="zuoti">
+<div class="stage-wrap">
+<div class="stage-cap">研医志 · 笔记中心 — 390 × 844</div>
+<div class="phone"><div class="screen">
+
+<div class="statusbar"><span>9:41</span><div class="sb-icons">
+<svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg>
+<svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M1.5 4.5a10 10 0 0 1 13 0"/><path d="M4 7.4a6.4 6.4 0 0 1 8 0"/><circle cx="8" cy="10" r="1.1" fill="currentColor" stroke="none"/></svg>
+<svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="currentColor" opacity=".5"/><rect x="2.5" y="2.5" width="15" height="7" rx="1.8" fill="currentColor"/><path d="M23.5 4v4a2 2 0 0 0 0-4z" fill="currentColor" opacity=".5"/></svg>
+</div></div>
+
+<!-- ========== 屏 1：笔记列表 ========== -->
+<div class="scr on" id="scr-list">
+<header class="stage-head">
+<div class="appbar">
+<div class="appbar-back" onclick="location.href='yuxi.html'"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div>
+<div class="appbar-title">笔记中心</div>
+<div class="appbar-right"><a class="qavatar" href="profile.html" aria-label="个人中心"><svg class="ic ic-sm" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/></svg></a></div>
+</div>
+</header>
+
+<main class="scroll" style="padding-bottom:140px">
+<div class="searchbar">
+<svg class="ic ic-sm" viewBox="0 0 24 24" style="color:var(--faint)"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-3.8-3.8"/></svg>
+<input id="search" placeholder="搜索关键词、科目、知识点" oninput="applyFilter()">
+</div>
+<div class="filter-row" id="f-type">
+<span class="fchip on" onclick="fType(this,'')">全部类型</span>
+<span class="fchip" onclick="fType(this,'知识总结')">知识总结</span>
+<span class="fchip" onclick="fType(this,'易混对比')">易混对比</span>
+<span class="fchip" onclick="fType(this,'记忆口诀')">记忆口诀</span>
+<span class="fchip" onclick="fType(this,'我的疑问')">我的疑问</span>
+<span class="fchip" onclick="fType(this,'错题启示')">错题启示</span>
+</div>
+<div class="filter-row" id="f-src">
+<span class="fchip on" onclick="fSrc(this,'')">全部来源</span>
+<span class="fchip" onclick="fSrc(this,'预习')">预习</span>
+<span class="fchip" onclick="fSrc(this,'上课')">上课</span>
+<span class="fchip" onclick="fSrc(this,'做题')">做题</span>
+<span class="fchip" onclick="fSrc(this,'复习')">复习</span>
+<span class="fchip" onclick="fSrc(this,'改错')">改错</span>
+</div>
+<div class="row between" style="margin-top:10px">
+<span class="t12 faint" id="f-count">共 5 条</span>
+<button class="linkbtn mut hide" style="min-height:32px;padding:4px" id="f-clear" onclick="clearFilter()">清除筛选</button>
+</div>
+
+<!-- 待处理：AI 整理待确认 -->
+<div id="pending-zone">
+<div class="t12" style="margin-top:14px;font-weight:600;color:var(--c-shangke)">待处理 · AI 整理待你确认 <span class="num">1</span></div>
+<div class="note-card" data-pending="1" style="border-color:color-mix(in srgb,var(--c-shangke) 35%,transparent)">
+<div class="row between"><div class="note-title">藏象学说 · 五脏功能对比</div><span class="chip tag-warn t12">待确认</span></div>
+<div class="note-body">AI 已将 3 段语音转写整理为结构化对比表，等待你确认采用。</div>
+<div class="note-meta"><span class="chip">知识总结</span><span class="chip">来源 · 上课</span><span class="chip">藏象学说</span></div>
+<div class="btn-row" style="margin-top:12px">
+<button class="btn btn-soft btn-sm" onclick="openDetail(0)">查看对比</button>
+<button class="btn btn-primary btn-sm" onclick="adopt(this)">采用并保存</button>
+</div>
+</div>
+</div>
+
+<div id="note-list" style="margin-top:2px"></div>
+
+<!-- 无结果 / 无笔记 -->
+<div class="empty hide" id="no-result">
+<svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-3.8-3.8"/></svg>
+<h4>没有匹配的笔记</h4>
+<p>试试更换关键词，或清除筛选条件。</p>
+<button class="btn btn-soft btn-sm" style="margin-top:6px" onclick="clearFilter()">清除筛选</button>
+</div>
+</main>
+
+<!-- 悬浮新建 -->
+<button class="btn btn-primary" style="position:absolute;left:16px;right:16px;bottom:22px;z-index:15;width:auto;box-shadow:0 10px 28px rgba(0,0,0,.5)" onclick="openNew()" data-od-id="btn-new-note">
+<svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>新建笔记</button>
+</div>
+
+<!-- ========== 屏 2：笔记详情 / 编辑 ========== -->
+<div class="scr immersive" id="scr-detail">
+<header class="stage-head">
+<div class="appbar">
+<div class="appbar-back" onclick="go('scr-list')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div>
+<div class="appbar-title">笔记详情</div>
+<div class="appbar-right"><span class="t12 faint" id="save-hint">已自动保存</span></div>
+</div>
+</header>
+<main class="scroll">
+<input class="ta" id="d-title" style="min-height:44px;font-size:15.5px;font-weight:600;background:transparent;border:none;padding:14px 2px 6px" value="藏象学说 · 五脏功能对比" oninput="autoSave()">
+<div class="row" style="gap:6px;flex-wrap:wrap" id="d-meta">
+<span class="chip">知识总结</span><span class="chip">来源 · 上课</span><span class="chip acc">关联 · 藏象学说</span>
+</div>
+
+<!-- 版本对比（详情页内） -->
+<div class="vs-grid" style="margin-top:14px" id="d-vs">
+<div class="vs-col">
+<h5>原始版本 · 语音转写</h5>
+<div id="d-raw">肝就是管气机的嘛，气机…然后情志也跟肝有关系。脾是运化，还有统血，统血就是别让血跑出去。心主血脉，这个比较直接。肾…藏精，还有纳气。</div>
+</div>
+<div class="vs-col ai">
+<h5>AI 整理稿 · 待确认</h5>
+<div id="d-ai">五脏核心功能：<br>肝——主疏泄（调畅气机、情志）、藏血（贮藏调节）；<br>脾——主运化、统血（固摄）；<br>心——主血脉；<br>肾——藏精、主纳气。</div>
+</div>
+</div>
+<div class="btn-row" style="margin-top:12px" id="d-vs-actions">
+<button class="btn btn-ghost btn-sm" onclick="editAdopt()">编辑后采用</button>
+<button class="btn btn-primary btn-sm" onclick="adoptDetail()">采用并保存</button>
+<button class="btn btn-soft btn-sm" onclick="skipAdopt()">暂不采用</button>
+</div>
+<div class="t12 faint hide" id="d-adopted" style="margin-top:10px">已采用，原始版本已保留 · 可在版本历史中回看</div>
+
+<textarea class="ta" id="d-body" style="margin-top:16px;min-height:160px" oninput="autoSave()">五脏核心功能：肝主疏泄（调畅气机、情志）、藏血（贮藏调节）；脾主运化、统血（固摄）；心主血脉；肾藏精、主纳气。</textarea>
+
+<div class="row" style="gap:8px;margin-top:12px;flex-wrap:wrap">
+<button class="btn btn-soft btn-sm" onclick="toast('已转为记忆卡片 · 明天到期')">转记忆卡片</button>
+<button class="btn btn-soft btn-sm" onclick="toast('版本历史 · 共 3 版')">版本历史</button>
+<button class="btn btn-ghost btn-sm" style="color:var(--c-gaicuo)" onclick="softDelete()">删除</button>
+</div>
+</main>
+</div>
+
+<!-- ========== 屏 3：新建笔记（底部抽屉） ========== -->
+<div class="scrim" id="scrim" onclick="closeNew()"></div>
+<div class="sheet" id="sheet">
+<div class="sheet-grab"></div>
+<div class="sheet-scroll">
+<div class="card-title" style="font-size:17px">新建笔记</div>
+<div class="t12 faint" style="margin-top:4px">自动关联当前上下文 · 未关联也可稍后补充</div>
+<input class="ta" id="n-title" style="min-height:44px;margin-top:14px" placeholder="标题（可留空自动取首行）">
+<textarea class="ta" id="n-body" style="margin-top:10px;min-height:110px" placeholder="开始记录…支持文字；语音与图片入口在下方"></textarea>
+<div class="row" style="gap:8px;margin-top:12px">
+<button class="btn btn-soft btn-sm" id="btn-asr" onclick="asrDemo()">
+<svg class="ic ic-sm" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>语音转写</button>
+<button class="btn btn-soft btn-sm" onclick="toast('图片 / OCR 为 P1 后续能力 · 当前版本先支持文字与语音')" data-od-id="btn-ocr">
+<svg class="ic ic-sm" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="3"/><circle cx="9" cy="10" r="1.6"/><path d="M4.5 17l4.5-4 3.5 3 3-2.5 4 3.5"/></svg>图片 / OCR<span class="chip t12" style="padding:1px 6px;margin-left:4px">P1</span></button>
+<button class="btn btn-soft btn-sm" onclick="toast('AI 整理为 P1 后续能力 · 采用前需你确认')" data-od-id="btn-ai-sort">AI 整理<span class="chip t12" style="padding:1px 6px;margin-left:4px">P1</span></button>
+</div>
+<div class="btn-row" style="margin-top:16px">
+<button class="btn btn-ghost" onclick="closeNew()">取消</button>
+<button class="btn btn-primary" onclick="saveNew()">保存笔记</button>
+</div>
+</div>
+</div>
+
+</div></div>
+</div>
+
+<script>
+const NOTES=[
+ {title:'肝藏血 vs 脾统血 · 易混对比',body:'藏血=仓库（贮藏调节，关联月经与筋目）；统血=闸门（固摄，失常则慢性出血）。考场先定位关键词再排选项。',type:'易混对比',src:'改错',kp:'肝藏血与脾统血',state:'关联错题 · 待验证',stateCls:'tag-bad'},
+ {title:'「气情消生」四字诀 · 肝主疏泄',body:'气机—情志—消化—生殖。口诀：气情消生。注意与脾统血区分。',type:'记忆口诀',src:'复习',kp:'肝主疏泄',state:'已转卡片 · 明天到期',stateCls:'tag-ok'},
+ {title:'心主血脉病理表现 · 疑问',body:'脉结代与脉促的鉴别还不稳：结代偏虚还是偏实？下次上课要追问。',type:'我的疑问',src:'做题',kp:'心主血脉',state:'待解决',stateCls:'tag-warn'},
+ {title:'脾主运化 · 知识总结',body:'运化水谷 + 运化水液 + 主升清。完谷不化提示脾肾阳虚，不属心主血脉范畴。',type:'知识总结',src:'上课',kp:'脾主运化',state:'可转记忆卡片',stateCls:''},
+ {title:'五行乘侮 · 错题启示',body:'「克」为生理、「乘」为病理。见肝传脾=木乘土，先安未受邪之地。',type:'错题启示',src:'改错',kp:'五行乘侮',state:'关联错题 · 已消灭',stateCls:'tag-ok'}
+];
+let curType='',curSrc='',curIdx=0,deleted=new Set();
+function renderList(){
+ const kw=document.getElementById('search').value.trim();
+ const list=document.getElementById('note-list');list.innerHTML='';
+ let n=0;
+ NOTES.forEach((N,i)=>{
+  if(deleted.has(i))return;
+  if(curType&&N.type!==curType)return;
+  if(curSrc&&N.src!==curSrc)return;
+  if(kw&&!(N.title+N.body+N.kp).includes(kw))return;
+  n++;
+  const d=document.createElement('div');d.className='note-card';
+  d.innerHTML='<div class="note-title">'+N.title+'</div>'
+   +'<div class="note-body">'+N.body.slice(0,46)+(N.body.length>46?'…':'')+'</div>'
+   +'<div class="note-meta"><span class="chip">'+N.type+'</span><span class="chip">来源 · '+N.src+'</span><span class="chip">'+N.kp+'</span>'
+   +(N.state?'<span class="chip '+N.stateCls+'" style="cursor:pointer">'+N.state+'</span>':'')+'</div>';
+  d.onclick=()=>openDetail(i);
+  list.appendChild(d);
+ });
+ document.getElementById('f-count').textContent='共 '+n+' 条';
+ document.getElementById('no-result').classList.toggle('hide',n>0);
+ const filtered=curType||curSrc||kw;
+ document.getElementById('f-clear').classList.toggle('hide',!filtered);
+}
+function fType(el,v){document.querySelectorAll('#f-type .fchip').forEach(c=>c.classList.remove('on'));el.classList.add('on');curType=v;applyFilter();}
+function fSrc(el,v){document.querySelectorAll('#f-src .fchip').forEach(c=>c.classList.remove('on'));el.classList.add('on');curSrc=v;applyFilter();}
+function applyFilter(){renderList();}
+function clearFilter(){
+ curType='';curSrc='';document.getElementById('search').value='';
+ document.querySelectorAll('.filter-row .fchip').forEach((c,i)=>c.classList.toggle('on',i===0||c.parentNode.id==='f-src'&&c===c.parentNode.firstElementChild));
+ document.querySelectorAll('#f-type .fchip, #f-src .fchip').forEach(c=>c.classList.remove('on'));
+ document.querySelector('#f-type .fchip').classList.add('on');
+ document.querySelector('#f-src .fchip').classList.add('on');
+ renderList();
+}
+function go(id){
+ document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));
+ document.getElementById(id).classList.add('on');
+ const sc=document.querySelector('#'+id+' .scroll');if(sc)sc.scrollTop=0;
+}
+function openDetail(i){
+ curIdx=i;const N=NOTES[i];
+ document.getElementById('d-title').value=N.title;
+ document.getElementById('d-body').value=N.body;
+ document.getElementById('d-meta').innerHTML='<span class="chip">'+N.type+'</span><span class="chip">来源 · '+N.src+'</span><span class="chip acc">关联 · '+N.kp+'</span>';
+ const pending=i===0;
+ document.getElementById('d-vs').style.display=pending?'grid':'none';
+ document.getElementById('d-vs-actions').style.display=pending?'flex':'none';
+ document.getElementById('d-adopted').classList.add('hide');
+ go('scr-detail');
+}
+function adopt(btn){
+ btn.closest('.note-card').querySelector('.chip.tag-warn').outerHTML='<span class="chip tag-ok t12">已采用</span>';
+ toast('已采用，原始版本已保留');
+}
+function adoptDetail(){
+ document.getElementById('d-vs-actions').style.display='none';
+ document.getElementById('d-adopted').classList.remove('hide');
+ document.getElementById('d-body').value=document.getElementById('d-ai').innerText;
+ toast('已采用，原始版本已保留');
+}
+function editAdopt(){
+ document.getElementById('d-body').value=document.getElementById('d-ai').innerText;
+ document.getElementById('d-body').focus();
+ toast('已载入 AI 整理稿 · 编辑后点保存即采用');
+}
+function skipAdopt(){
+ document.getElementById('d-vs-actions').style.display='none';
+ toast('已暂不采用 · 原始版本保留在列表');
+}
+function autoSave(){
+ const h=document.getElementById('save-hint');
+ h.textContent='保存中…';
+ clearTimeout(h._t);
+ h._t=setTimeout(()=>h.textContent='已自动保存',700);
+}
+function softDelete(){
+ deleted.add(curIdx);
+ go('scr-list');renderList();
+ toast('已删除 · 30 天内可在回收站恢复');
+}
+function openNew(){document.getElementById('scrim').classList.add('on');document.getElementById('sheet').classList.add('on');}
+function closeNew(){document.getElementById('scrim').classList.remove('on');document.getElementById('sheet').classList.remove('on');}
+function asrDemo(){
+ const b=document.getElementById('btn-asr');
+ b.innerHTML='<span class="spin" style="width:14px;height:14px"></span>转写中…';
+ setTimeout(()=>{
+  b.innerHTML='<svg class="ic ic-sm" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>语音转写';
+  document.getElementById('n-body').value+='（语音转写）肝主疏泄，四个方面：气机、情志、消化、生殖。';
+  toast('转写完成 · 已追加到正文');
+ },1200);
+}
+function saveNew(){
+ const t=document.getElementById('n-title').value.trim()||document.getElementById('n-body').value.trim().slice(0,14)||'未命名笔记';
+ const b=document.getElementById('n-body').value.trim();
+ if(!b){toast('正文不能为空');return;}
+ NOTES.unshift({title:t,body:b,type:'知识总结',src:'上课',kp:'未关联',state:'',stateCls:''});
+ document.getElementById('n-title').value='';document.getElementById('n-body').value='';
+ closeNew();renderList();toast('笔记已保存');
+}
+function toast(msg){
+ const old=document.querySelector('.toast');if(old)old.remove();
+ const t=document.createElement('div');t.className='toast';t.style.bottom='86px';
+ t.innerHTML='<svg class="ic ic-sm" viewBox="0 0 24 24" style="color:var(--accent)"><path d="M20 6L9 17l-5-5"/></svg>'+msg;
+ document.querySelector('.phone').appendChild(t);
+ setTimeout(()=>{t.style.opacity='0';t.style.transition='opacity .2s';setTimeout(()=>t.remove(),220);},1800);
+}
+renderList();
+</script>
+</body>
+</html>

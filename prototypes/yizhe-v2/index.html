@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>研医志 · 高保真原型导航</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body style="display:block">
+<div class="launch">
+
+<div class="eyebrow" style="--accent:#5C8DFF">研医志 · 医学考研智能学习系统</div>
+<h1 style="margin-top:10px">微信小程序高保真 UI 原型 <span class="t13 muted">V2.0 · 第二轮重构</span></h1>
+<p class="t13 muted" style="margin-top:10px;line-height:1.7">核心闭环：预习 → 上课 → 做题 → 复习 → 改错。每阶段拆分为「阶段首页 / 任务执行页（沉浸 · 隐藏 TabBar）/ 结果页」；每屏仅一个主动作；按钮出现与可点击由业务条件控制；笔记中心与我的使用返回导航。画布 390×844（自适应 375×812）。</p>
+
+<div class="token-row">
+<span class="chip" style="border-color:#3BC6D9;color:#3BC6D9">预习 #3BC6D9</span>
+<span class="chip" style="border-color:#D9AE63;color:#D9AE63">上课 #D9AE63</span>
+<span class="chip" style="border-color:#5C8DFF;color:#5C8DFF">做题 #5C8DFF</span>
+<span class="chip" style="border-color:#49C99A;color:#49C99A">复习 #49C99A</span>
+<span class="chip" style="border-color:#F07A56;color:#F07A56">改错 #F07A56</span>
+<span class="chip">背景 #0A0F16</span>
+<span class="chip">卡片 #151F2B / #1A2634</span>
+</div>
+
+<div class="launch-grid">
+
+<a class="launch-card" style="--lc:#3BC6D9" href="yuxi.html" data-od-id="nav-yuxi">
+<h3><span class="dot"></span>预习 <span class="chip t12" style="margin-left:auto">4 屏</span></h3>
+<p>选科目章节（逐级目录）→ 章节概览 / 知识地图（节点可点）→ 真实 3 题检测（可跳过 / 提交）→ 薄弱清单结果页 →「去上课解决这些问题」。老用户先见「继续预习」。</p>
+</a>
+
+<a class="launch-card" style="--lc:#D9AE63" href="shangke.html" data-od-id="nav-shangke">
+<h3><span class="dot"></span>上课 <span class="chip t12" style="margin-left:auto">2 屏</span></h3>
+<p>任务列表与知识点详情拆页 · 视频倍速 / 字幕 / 进度记忆 / 章节节点 · 图文讲义 / 易混点 / 我的笔记 · AI 降为上下文辅助 · 微测 1/3→3/3 真实推进，达标后才开放「去做题验证」· 低权重「仍未理解」反馈。</p>
+</a>
+
+<a class="launch-card" style="--lc:#5C8DFF" href="zuoti.html" data-od-id="nav-zuoti">
+<h3><span class="dot"></span>做题 <span class="chip t12" style="margin-left:auto">5 屏</span></h3>
+<p>今日推荐练习 → 单题作答（逐题切换 / 收藏 / 猜测标记 / 本题笔记自动保存）→ 单题解析（标准 / AI 分层 / 我的笔记，权重提示）→ 整组结果按表现给唯一推荐动作 · 真题/模考一行轻入口，无固定开考时间。</p>
+</a>
+
+<a class="launch-card" style="--lc:#49C99A" href="fuxi.html" data-od-id="nav-fuxi">
+<h3><span class="dot"></span>复习 <span class="chip t12" style="margin-left:auto">3 屏</span></h3>
+<p>今日到期 6 张卡 → 主动回忆卡（默认隐藏答案，语音作答 / 查看笔记记为辅助）→ 查看答案后才出现「记住了 / 模糊 / 忘记」→ 结果页给数量与下次安排 · 无到期时只推荐一个主动作。</p>
+</a>
+
+<a class="launch-card" style="--lc:#F07A56" href="gaicuo.html" data-od-id="nav-gaicuo">
+<h3><span class="dot"></span>改错 <span class="chip t12" style="margin-left:auto">7 屏</span></h3>
+<p>今日待改错 + 五类真实筛选列表 → 错题详情 + AI 建议原因（用户确认）+ 三字段改错记录 → 待间隔重做（24h，可演示模拟）→ 原题乱序重做 → 2 道同类题验证 → 已消灭。保存原因不再直接完成。</p>
+</a>
+
+<a class="launch-card" style="--lc:#B7C1CE" href="notes.html" data-od-id="nav-notes">
+<h3><span class="dot"></span>笔记中心 <span class="chip t12" style="margin-left:auto">2 屏 + 抽屉</span></h3>
+<p>列表仅摘要（标题 / 摘要 / 来源 / 知识点 / 状态）· 真实搜索与双排筛选（含无结果与清除）· 待处理区集中确认 AI 整理 · 详情页版本对比「编辑后采用 / 采用并保存 / 暂不采用」· 底部新建（文字 + ASR，OCR/AI 整理标注 P1）· 软删除可恢复。</p>
+</a>
+
+<a class="launch-card" style="--lc:#C9A86A" href="profile.html" data-od-id="nav-profile">
+<h3><span class="dot"></span>我的 <span class="chip t12" style="margin-left:auto">9 屏</span></h3>
+<p>菜单三组（学习资产 / 计划与提醒 / 账号与服务）· 会员多状态（未开通 / 试用 / 已开通 / 将到期 / 已过期）+ 支付弹层（成功 / 取消 / 失败）· 价格权益标注示例配置 · 数据导出与账号注销 · 全部菜单可进入子页面。</p>
+</a>
+
+<a class="launch-card" style="--lc:#8997A8" href="states.html" data-od-id="nav-states">
+<h3><span class="dot"></span>组件与状态规范 <span class="chip t12" style="margin-left:auto">设计稿</span></h3>
+<p>按页面结构的骨架屏 · 无任务 / 无结果 / 内容下架 / 离线待同步 / 同步冲突 · AI 无依据 / 拒答 / 限流 · ASR / 上传 / 权限长期拒绝 · 支付失败与到期提醒 · Toast 安全区规范。定位为设计规范页。</p>
+</a>
+
+</div>
+
+<p class="t12 faint" style="margin-top:32px;line-height:1.7">第二轮验收对照：三操作进入首个任务 · 每屏单主动作 · 预习/上课/做题/复习/改错全流程可连续推进 · 笔记双版本需确认 · 会员不写死商业方案 · 二级页返回有兜底。设计依据：brand-spec.md（源自设计要求 V1.0 + 字体与排版修改要求 V1.0）· 全局系统字体栈（PingFang SC / HarmonyOS Sans SC / Microsoft YaHei），数字 tabular-nums 等宽 · 阶段强调色单页占比 ≤15%。</p>
+
+</div>
+</body>
+</html>

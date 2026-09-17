@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>研医志 · 预习</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body data-stage="yuxi">
+<div class="stage-wrap">
+<div class="stage-cap">研医志 · 预习 — 390 × 844</div>
+<div class="phone"><div class="screen">
+
+<!-- 阶段语义纹理：节点连线 -->
+<svg class="stage-tex" viewBox="0 0 390 844" preserveAspectRatio="none"><path d="M-20 700 L120 560 L260 640 L410 500" stroke="#3BC6D9" stroke-width="1.2" fill="none" stroke-dasharray="3 7"/><circle cx="120" cy="560" r="4" fill="#3BC6D9"/><circle cx="260" cy="640" r="3" fill="#3BC6D9"/></svg>
+
+<div class="statusbar"><span>9:41</span><div class="sb-icons">
+<svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg>
+<svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M1.5 4.5a10 10 0 0 1 13 0"/><path d="M4 7.4a6.4 6.4 0 0 1 8 0"/><circle cx="8" cy="10" r="1.1" fill="currentColor" stroke="none"/></svg>
+<svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="currentColor" opacity=".5"/><rect x="2.5" y="2.5" width="15" height="7" rx="1.8" fill="currentColor"/><path d="M23.5 4v4a2 2 0 0 0 0-4z" fill="currentColor" opacity=".5"/></svg>
+</div></div>
+
+<!-- ========== 屏 1：阶段首页 · 目录 ========== -->
+<div class="scr on" id="scr-home">
+<header class="stage-head">
+<div class="stage-name"><span class="stage-dot"></span>预习</div>
+<div class="crumb-row">
+<div class="crumb">中医综合（307） · <b id="crumb-pos">选择章节</b></div>
+<div class="quick-links">
+<a class="qlink" href="notes.html"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>笔记</a>
+<a class="qavatar" href="profile.html" aria-label="个人中心"><svg class="ic ic-sm" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/></svg></a>
+</div></div>
+</header>
+
+<main class="scroll">
+
+<!-- 未完成任务：继续预习（老用户优先） -->
+<section class="card" id="resume-card" data-od-id="resume-task">
+<div class="eyebrow">未完成的预习</div>
+<div class="card-title" style="margin-top:8px">藏象学说 · 五脏</div>
+<div class="card-sub">检测已完成 1 / 3 题 · 上次进行到第 2 题</div>
+<button class="btn btn-primary" style="margin-top:14px" onclick="go('scr-quiz');toast('已从上次进度继续')" data-od-id="btn-resume">继续预习检测</button>
+<button class="linkbtn mut" style="width:100%;justify-content:center" onclick="document.getElementById('resume-card').classList.add('hide');toast('可重新从目录选择章节')">更换章节</button>
+</section>
+
+<!-- 分级目录 -->
+<section class="card" id="catalog" data-od-id="catalog-tree">
+<div class="row between">
+<div class="card-title" style="font-size:15.5px">选择科目与章节</div>
+<span class="chip">逐级展开</span>
+</div>
+<div class="tree">
+<div class="tree-node open">
+<div class="tree-head" onclick="this.parentNode.classList.toggle('open')">
+<svg class="ic ic-sm arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+<b style="font-size:14px">中医基础理论</b>
+<span class="chip t12" style="margin-left:auto">12 / 20 章</span>
+</div>
+<div class="tree-body">
+<div class="tree-node open" style="background:var(--card2)">
+<div class="tree-head" onclick="event.stopPropagation();this.parentNode.classList.toggle('open')">
+<svg class="ic ic-sm arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+<span style="font-size:13px">藏象学说</span>
+<span class="chip acc t12" style="margin-left:auto">进行中</span>
+</div>
+<div class="tree-body">
+<div class="tree-lv1">
+<div class="tree-kp" onclick="openChapter('藏象学说 · 心','心主血脉')" style="cursor:pointer"><span class="st ok"></span>心主血脉<span class="chip tag-ok" style="padding:2px 8px">已掌握 · 历史</span></div>
+<div class="tree-kp" onclick="openChapter('藏象学说 · 肝','肝主疏泄')" style="cursor:pointer"><span class="st bad"></span>肝主疏泄<span class="chip tag-bad" style="padding:2px 8px">不会 · 历史</span></div>
+<div class="tree-kp" onclick="openChapter('藏象学说 · 肝','肝藏血')" style="cursor:pointer"><span class="st mid"></span>肝藏血<span class="chip tag-warn" style="padding:2px 8px">模糊 · 历史</span></div>
+<div class="tree-kp" onclick="openChapter('藏象学说 · 脾','脾主运化')" style="cursor:pointer"><span class="st none"></span>脾主运化<span class="chip" style="padding:2px 8px">未学</span></div>
+</div>
+</div>
+</div>
+<div class="tree-node" style="background:var(--card2)">
+<div class="tree-head" onclick="event.stopPropagation();this.parentNode.classList.toggle('open')">
+<svg class="ic ic-sm arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+<span style="font-size:13px">气血津液</span>
+<span class="chip t12" style="margin-left:auto">8 知识点</span>
+</div>
+<div class="tree-body"><div class="tree-lv1">
+<div class="tree-kp" onclick="openChapter('气血津液','气的生成与分类')" style="cursor:pointer"><span class="st none"></span>气的生成与分类</div>
+<div class="tree-kp" onclick="openChapter('气血津液','血的运行与调节')" style="cursor:pointer"><span class="st none"></span>血的运行与调节</div>
+</div></div>
+</div>
+</div>
+</div>
+<div class="tree-node">
+<div class="tree-head" onclick="this.parentNode.classList.toggle('open')">
+<svg class="ic ic-sm arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+<b style="font-size:14px">中医诊断学</b>
+<span class="chip t12" style="margin-left:auto">0 / 14 章</span>
+</div>
+<div class="tree-body"><div class="tree-lv1">
+<div class="tree-kp" onclick="openChapter('望诊','舌象 · 舌质与舌苔')" style="cursor:pointer"><span class="st none"></span>望诊 · 舌象</div>
+<div class="tree-kp" onclick="openChapter('脉诊','二十八脉 · 浮沉迟数')" style="cursor:pointer"><span class="st none"></span>脉诊 · 二十八脉</div>
+</div></div>
+</div>
+</div>
+</section>
+
+<!-- 历史预习 -->
+<section class="card" data-od-id="history-preview">
+<div class="card-sub" style="margin-top:0;font-weight:600;color:var(--fg);font-size:14px">历史预习</div>
+<div class="row between" style="margin-top:12px">
+<div><div class="t13">阴阳学说 · 全部掌握</div><div class="t12 faint" style="margin-top:3px">7 月 30 日 · 用时 11 分钟</div></div>
+<span class="chip tag-ok">已掌握 10/10</span>
+</div>
+<div class="row between" style="margin-top:12px">
+<div><div class="t13">五行学说 · 生克制化</div><div class="t12 faint" style="margin-top:3px">7 月 28 日 · 用时 14 分钟</div></div>
+<span class="chip tag-warn">模糊 2</span>
+</div>
+</section>
+
+</main>
+
+<nav class="tabbar" data-od-id="tabbar">
+<a class="tab-item active" href="yuxi.html"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>预习</a>
+<a class="tab-item" href="shangke.html"><svg class="ic" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="3"/><path d="M10.5 9.7l4.2 2.3-4.2 2.3z"/></svg>上课</a>
+<a class="tab-item" href="zuoti.html"><svg class="ic" viewBox="0 0 24 24"><path d="M8 6.5h12M8 12h12M8 17.5h12"/><path d="M3.6 6.5h.01M3.6 12h.01M3.6 17.5h.01"/></svg>做题</a>
+<a class="tab-item" href="fuxi.html"><svg class="ic" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 3.5V7.5h-4"/></svg>复习</a>
+<a class="tab-item" href="gaicuo.html"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9 12l2 2 4-4.5"/></svg>改错</a>
+</nav>
+</div>
+
+<!-- ========== 屏 2：章节概览 / 知识地图 ========== -->
+<div class="scr" id="scr-chapter">
+<header class="stage-head">
+<div class="appbar">
+<div class="appbar-back" onclick="go('scr-home')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div>
+<div class="appbar-title">章节概览</div>
+<div class="appbar-right"></div>
+</div>
+</header>
+<main class="scroll">
+<section class="card" style="margin-top:14px" data-od-id="chapter-overview">
+<div class="eyebrow">知识地图</div>
+<div class="card-title" style="margin-top:8px" id="ch-title">藏象学说 · 肝主疏泄</div>
+<div class="card-sub">18 个知识点 · 覆盖 4 个高频考点 · 预计 15 分钟</div>
+<div class="kmap" data-od-id="knowledge-map">
+<svg viewBox="0 0 358 150" fill="none">
+<path d="M40 110 L110 60 L180 90 L250 40 L320 70" stroke="rgba(170,182,197,.18)" stroke-width="1.2"/>
+<path d="M40 110 L110 60 L180 90" stroke="var(--accent)" stroke-width="1.4" stroke-dasharray="4 5" opacity=".55"/>
+<circle cx="40" cy="110" r="6" fill="var(--accent)" opacity=".9" style="cursor:pointer" onclick="kpTip(this,'心主血脉','高频考点 · 近5年4考')"/>
+<circle cx="110" cy="60" r="5" fill="#151F2B" stroke="var(--accent)" stroke-width="1.5" style="cursor:pointer" onclick="kpTip(this,'肝主疏泄','核心 · 调畅气机')"/>
+<circle cx="180" cy="90" r="4" fill="#151F2B" stroke="#3A4656" stroke-width="1.5" style="cursor:pointer" onclick="kpTip(this,'肝藏血','与脾统血易混')"/>
+<circle cx="250" cy="40" r="4" fill="#151F2B" stroke="#3A4656" stroke-width="1.5" style="cursor:pointer" onclick="kpTip(this,'肺主气','关联 · 气机升降')"/>
+<circle cx="320" cy="70" r="4" fill="#151F2B" stroke="#3A4656" stroke-width="1.5" style="cursor:pointer" onclick="kpTip(this,'肾藏精','关联 · 肝肾同源')"/>
+<text x="40" y="130" font-size="10" fill="#8997A8" text-anchor="middle">心</text>
+<text x="110" y="42" font-size="10" fill="#F2F5F8" text-anchor="middle">肝</text>
+<text x="180" y="110" font-size="10" fill="#8997A8" text-anchor="middle">脾</text>
+<text x="250" y="24" font-size="10" fill="#8997A8" text-anchor="middle">肺</text>
+<text x="320" y="90" font-size="10" fill="#8997A8" text-anchor="middle">肾</text>
+</svg>
+</div>
+<div class="card2" id="kp-tip" style="display:none;margin-top:4px">
+<div class="row between"><b class="t13" id="kp-tip-name">肝主疏泄</b><span class="chip acc t12" id="kp-tip-tag">核心</span></div>
+<div class="t12 muted" style="margin-top:5px" id="kp-tip-desc">调畅气机 · 与情志、消化、生殖相关</div>
+</div>
+<div class="card-sub" style="margin-top:12px">点击节点查看名称与重要度 · 完整讲义在上课阶段展开</div>
+<button class="btn btn-primary" style="margin-top:14px" onclick="startQuiz()" data-od-id="btn-start-quiz">开始快速检测 · 3 题约 2 分钟</button>
+</section>
+</main>
+</div>
+
+<!-- ========== 屏 3：快速检测（沉浸 · 隐藏 TabBar） ========== -->
+<div class="scr immersive" id="scr-quiz">
+<header class="stage-head">
+<div class="appbar">
+<div class="appbar-back" onclick="leaveQuiz()"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>退出</div>
+<div class="appbar-title">快速预习检测</div>
+<div class="appbar-right"><span class="chip t12 num" id="quiz-pos">1 / 3</span></div>
+</div>
+</header>
+<main class="scroll">
+<div class="qdots" style="margin-top:14px" id="quiz-dots">
+<span class="qdot now">1</span><span class="qdot">2</span><span class="qdot">3</span>
+</div>
+<section class="card" data-od-id="quiz-card">
+<div class="t12 faint">单选 · 藏象学说</div>
+<div class="card-title" style="margin-top:8px;font-size:14px;line-height:1.7;font-weight:500" id="quiz-q">肝主疏泄的生理功能，不包括下列哪项？</div>
+<div id="quiz-opts">
+<div class="opt" onclick="pick(this)"><span class="opt-key">A</span>调畅气机，促进脾胃运化</div>
+<div class="opt" onclick="pick(this)"><span class="opt-key">B</span>调畅情志，维持气血和调</div>
+<div class="opt" onclick="pick(this)"><span class="opt-key">C</span>主统血，使血不逸出脉外</div>
+<div class="opt" onclick="pick(this)"><span class="opt-key">D</span>促进胆汁的分泌与排泄</div>
+</div>
+</section>
+<div class="btn-row" style="margin-top:14px">
+<button class="btn btn-ghost" onclick="skipQ()" data-od-id="btn-skip">跳过</button>
+<button class="btn btn-primary off" id="btn-next-q" onclick="nextQ()" data-od-id="btn-next-q">下一题</button>
+</div>
+<div class="t12 faint" style="text-align:center;margin-top:12px">提交前不展示掌握结论 · 答案可返回修改</div>
+</main>
+</div>
+
+<!-- ========== 屏 4：检测结果 ========== -->
+<div class="scr" id="scr-result">
+<header class="stage-head">
+<div class="appbar">
+<div class="appbar-back" onclick="go('scr-chapter')"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>返回</div>
+<div class="appbar-title">检测结果</div>
+<div class="appbar-right"></div>
+</div>
+</header>
+<main class="scroll">
+<section class="card" style="margin-top:14px" data-od-id="quiz-result">
+<div class="eyebrow">本次检测结论</div>
+<div class="card-title" style="margin-top:8px">发现 <span class="num" style="color:var(--c-gaicuo)">3</span> 个薄弱知识点</div>
+<div class="card-sub">依据本次作答与跳过记录生成，与目录中的历史状态独立计算</div>
+<div class="row" style="margin-top:12px;gap:8px;flex-wrap:wrap">
+<span class="chip tag-ok">已掌握 <b class="num">8</b></span>
+<span class="chip tag-warn">模糊 <b class="num">4</b></span>
+<span class="chip tag-bad">不会 <b class="num">2</b></span>
+</div>
+<div class="divider"></div>
+<div class="t13" style="margin-top:12px;font-weight:600">薄弱知识点清单</div>
+<div class="tree-kp" style="padding-left:0"><span class="st bad"></span>肝主疏泄的生理功能<span class="chip t12" style="margin-left:0">近 5 年 4 考</span></div>
+<div class="tree-kp" style="padding-left:0"><span class="st bad"></span>肝藏血与脾统血的鉴别<span class="chip t12" style="margin-left:0">易混点</span></div>
+<div class="tree-kp" style="padding-left:0"><span class="st mid"></span>心主血脉的病理表现<span class="chip t12" style="margin-left:0">模糊</span></div>
+<div class="card2" style="margin-top:12px">
+<div class="t12 muted" style="line-height:1.6"><b style="color:var(--fg)">推荐原因：</b>以上 3 点将在今日上课中优先讲解，配合微型检测验证理解。</div>
+</div>
+<a class="btn btn-primary" style="margin-top:14px" href="shangke.html" data-od-id="btn-goto-class">去上课解决这些问题</a>
+<button class="linkbtn mut" style="width:100%;justify-content:center" onclick="restartQuiz()">重新检测一次</button>
+</section>
+</main>
+</div>
+
+<div class="scrim" id="scrim" onclick="closeSheet()"></div>
+<div class="sheet" id="sheet">
+<div class="sheet-grab"></div>
+<div class="card-title" style="font-size:15.5px">退出检测？</div>
+<div class="card-sub">已作答的题目将自动保存，下次可从断点继续。</div>
+<div class="btn-row" style="margin-top:16px">
+<button class="btn btn-ghost" onclick="closeSheet();go('scr-chapter')">保存并退出</button>
+<button class="btn btn-primary" onclick="closeSheet()">继续作答</button>
+</div>
+</div>
+
+</div></div>
+</div>
+
+<script>
+const QUIZ=[
+ {q:'肝主疏泄的生理功能，不包括下列哪项？',opts:['调畅气机，促进脾胃运化','调畅情志，维持气血和调','主统血，使血不逸出脉外','促进胆汁的分泌与排泄'],ans:2},
+ {q:'肝藏血与脾统血的主要区别在于？',opts:['肝藏血主贮藏调节，脾统血主固摄运行','肝藏血只与月经有关','脾统血负责生成血液','二者功能完全相同'],ans:0},
+ {q:'心主血脉功能失常，最不可能出现的表现是？',opts:['心悸怔忡','面色无华','脉结代','完谷不化'],ans:3}
+];
+let qi=0,picked=-1,answers=[null,null,null];
+function go(id){
+ document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));
+ document.getElementById(id).classList.add('on');
+ window.scrollTo(0,0);
+ const sc=document.querySelector('#'+id+' .scroll');if(sc)sc.scrollTop=0;
+}
+function openChapter(ch,kp){
+ document.getElementById('crumb-pos').textContent=ch;
+ document.getElementById('ch-title').textContent=ch.replace(' · ',' · ')+'';
+ document.getElementById('resume-card').classList.add('hide');
+ go('scr-chapter');toast('已进入「'+kp+'」章节概览');
+}
+function kpTip(el,name,tag){
+ const tip=document.getElementById('kp-tip');tip.style.display='block';
+ document.getElementById('kp-tip-name').textContent=name;
+ document.getElementById('kp-tip-tag').textContent=tag.split(' · ')[0];
+ document.getElementById('kp-tip-desc').textContent=tag;
+}
+function startQuiz(){qi=0;answers=[null,null,null];renderQ();go('scr-quiz');}
+function restartQuiz(){startQuiz();toast('已重置本次检测');}
+function renderQ(){
+ picked=answers[qi];
+ document.getElementById('quiz-pos').textContent=(qi+1)+' / 3';
+ const dots=document.getElementById('quiz-dots').children;
+ for(let i=0;i<3;i++){dots[i].className='qdot'+(i===qi?' now':'')+(answers[i]!==null?' done':'');}
+ const Q=QUIZ[qi];
+ document.getElementById('quiz-q').textContent=Q.q;
+ const box=document.getElementById('quiz-opts');box.innerHTML='';
+ Q.opts.forEach((t,i)=>{
+  const d=document.createElement('div');d.className='opt'+(picked===i?' sel':'');
+  d.innerHTML='<span class="opt-key">'+String.fromCharCode(65+i)+'</span>'+t;
+  d.onclick=()=>pick(d);box.appendChild(d);
+ });
+ const btn=document.getElementById('btn-next-q');
+ btn.textContent=qi===2?'提交并生成结果':'下一题';
+ btn.classList.toggle('off',answers[qi]===null);
+}
+function pick(el){
+ const box=document.getElementById('quiz-opts');
+ [...box.children].forEach(o=>o.classList.remove('sel'));
+ el.classList.add('sel');
+ picked=[...box.children].indexOf(el);
+ answers[qi]=picked;
+ document.getElementById('btn-next-q').classList.remove('off');
+}
+function skipQ(){
+ answers[qi]=answers[qi]===null?-1:answers[qi];
+ nextQ(true);
+}
+function nextQ(skipped){
+ if(qi<2){qi++;renderQ();}
+ else{
+  const done=answers.filter(a=>a!==null&&a!==-1).length;
+  go('scr-result');
+  toast('检测完成 · 已作答 '+done+' / 3 题');
+ }
+}
+function leaveQuiz(){
+ if(answers.some(a=>a!==null)){openSheet();}
+ else go('scr-chapter');
+}
+function openSheet(){document.getElementById('scrim').classList.add('on');document.getElementById('sheet').classList.add('on');}
+function closeSheet(){document.getElementById('scrim').classList.remove('on');document.getElementById('sheet').classList.remove('on');}
+function toast(msg){
+ const old=document.querySelector('.toast');if(old)old.remove();
+ const t=document.createElement('div');t.className='toast';t.style.bottom='96px';
+ t.innerHTML='<svg class="ic ic-sm" viewBox="0 0 24 24" style="color:var(--accent)"><path d="M20 6L9 17l-5-5"/></svg>'+msg;
+ document.querySelector('.phone').appendChild(t);
+ setTimeout(()=>{t.style.opacity='0';t.style.transition='opacity .2s';setTimeout(()=>t.remove(),220);},1800);
+}
+</script>
+</body>
+</html>
